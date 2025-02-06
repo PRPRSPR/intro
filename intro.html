@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<title>온라인 프로필</title>
+	<meta charset="utf-8">
+  <style>
+    body {
+        background-image: url(../media/25020622.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    table {
+      width:70%; 
+      margin: 5px 30px;
+      border:1px solid #d6d1cc; 
+      border-collapse: collapse; 
+      text-align: center;
+    }
+    thead {
+      background:#fcedd4;  
+    }
+    th, td {
+      border:1px solid #d6d1cc; 
+      padding:5px;  
+      font-size:0.8em; 
+    }
+    #container {
+        width: 800px;
+        height: 1000px;
+        margin: 10px auto;
+    }
+    #side {
+        width: 25%;
+        height: 100%;
+        background-color: #ffd8c1;
+        float: left;
+        
+    }
+    #contents {
+        width: 75%;
+        height: 100%;
+        background-color: rgb(255, 251, 243);
+        float: left;
+        color: #723d00;
+    }
+    #namecard {
+        width: 75%;
+        height: 55%;
+        margin: 20px auto;
+        text-align: center;
+        color: #8b4211;
+    }
+    #detail {
+        width: 75%;
+        height: 10%;
+        margin: 10px auto;
+        color: #6135179c;
+    }
+    #sns {
+        width: 75%;
+        height: 10%;
+        margin: 10px auto;
+        color: #8b4b01;
+    }
+    section {
+        margin: 30px;
+        padding: 20px;
+        border-bottom: 2px dotted #f0bb2b;
+    }
+    img {
+        border-radius: 10px;
+    }
+    .subtitle {
+        margin: 20px;
+        color: #b15e00;
+    }
+  </style>
+</head>
+
+<body>
+    <div id="container">
+        <!-- 사이드바 -->
+        <div id="side">
+            <div id="namecard">
+                <img src="../media/Beautiful Cat Profile Pic.jpg" alt="" width="150px">
+                <h1>
+                    <span style="font-size: 40px;">H</span>
+                    <span style="font-size: 35px;">O</span>
+                    <span style="font-size: 30px;">N</span>
+                    <span style="font-size: 25px;">G</span>
+                </h1>    
+                <p>프로그래밍 재밌댜</p>
+            </div>
+            <div id="detail">
+                <p>Incheon, Korea</p>
+                <p>whaong@naver.com</p>
+            </div>
+            <div id="sns">
+                <h2>SNS</h2>
+                <h3><a href="#">클릭!</a></h3>
+            </div>           
+        </div>
+        <div id="contents">
+            <section>
+                <h2 class="subtitle">자기소개</h2>
+                <p><mark>프로그래밍</mark>에 관심이 많습니댜. <br>현재 열심히 공부하며 코딩 즁!</p>
+            </section>
+
+            <!-- 경력 -->
+            <section>
+                <h2 class="subtitle">Experience</h2>
+                <ul>
+                    <li>프론트엔드
+                        <ul>
+                            <li>HTML/CSS/JAVASCRIPT </li>
+                            <li>웹 페이지 잘 만든댜 </li>
+                            <li>다 잘햠</li> 
+                        </ul>
+                    </li>
+                    <li>백엔드
+                        <ul>
+                            <li>자바 잘햠</li>
+                            <li>오라클 더 잘햠</li>
+                        </ul>                        
+                    </li>
+                </ul>             
+            </section>
+
+            <!-- 숙련도 -->
+            <section>
+                <h2 class="subtitle">보유 기술</h2>
+                <li style="list-style: none;"> 
+                    <ul>
+                        <li>자바</li>
+                        <li>오라클</li>
+                    </ul>                        
+                </li>
+            </section>
+
+            <!-- 학력 -->
+            <section>
+                <h2 class="subtitle">Education</h2>
+                <table>
+                  <caption>학력 사항</caption>
+                  <thead>
+                      <tr>
+                          <th>출신학교</th>
+                          <th>전공</th>
+                          <th>기간</th>
+                          <th>구분</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>좋은대학교</td>
+                          <td>좋은학과</td>
+                          <td>2010.3 ~ 2013.2</td>
+                          <td>졸업</td>
+                      </tr>
+                      <tr>
+                          <td>꽤좋은고등학교</td>
+                          <td> - </td>
+                          <td>2007.3 ~ 2009.2</td>
+                          <td>졸업</td>
+                      </tr>
+                  </tbody>
+                </table>
+            </section>
+        </div>        
+    </div>
+</body>
+</html>
