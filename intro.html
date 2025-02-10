@@ -5,74 +5,120 @@
 	<meta charset="utf-8">
   <style>
     body {
-        background-image: url(media/25020622.jpg);
+        background-image: url(media/bg250210.jpg);
         background-repeat: no-repeat;
         background-size: cover;
     }
     table {
       width:70%; 
       margin: 5px 30px;
-      border:1px solid #d6d1cc; 
       border-collapse: collapse; 
       text-align: center;
     }
     thead {
-      background:#fcedd4;  
+      background:#9ab675;  
     }
     th, td {
-      border:1px solid #d6d1cc; 
+      border:1px solid #879379; 
       padding:5px;  
       font-size:0.8em; 
     }
     #container {
         width: 800px;
         height: 1000px;
-        margin: 10px auto;
+        margin: 50px auto;
     }
     #side {
-        width: 25%;
-        height: 100%;
-        background-color: #ffd8c1;
-        float: left;
-        
-    }
-    #contents {
-        width: 75%;
-        height: 100%;
-        background-color: rgb(255, 251, 243);
-        float: left;
-        color: #723d00;
+        width: 100px;
+        height: 150px;
+        border-radius: 30px;
+        background-color: rgba(255, 249, 240, 0.601);
+        position: fixed;
+        transition: all 0.6s;
     }
     #namecard {
-        width: 75%;
-        height: 55%;
+        width: 100px;
+        height: 55px;
         margin: 20px auto;
         text-align: center;
-        color: #8b4211;
+        color: #a76234;
+        position: relative;
+        transition: all 0.5s;
+    }
+    #namecard h1, p {
+        margin: 0;
+    }
+    #profile {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+        border-radius: 50%;
+        transition: all 0.5s;
+    }
+    a img {
+        width: 30px;
+        height: 30px;
     }
     #detail {
-        width: 75%;
-        height: 10%;
-        margin: 10px auto;
-        color: #6135179c;
+        width: 100px;
+        height: 50px;
+        color: #0732199c;
+        text-align: left;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        transition: all 0.2s;
+    }
+    #detail p {
+        font-size: 14px;
     }
     #sns {
-        width: 75%;
-        height: 10%;
-        margin: 10px auto;
-        color: #8b4b01;
+        width: 100px;
+        height: 100px;
+        color: #5d5c17;
+        text-align: center;
+        position: absolute;
+        bottom: 100px;
+        left: 35px;
+        transition: all 0.2s;
+    }
+    #sns a {
+        display: inline-block;
+    }
+    .opswitch {
+        opacity: 0;
+    }
+    #side:hover {
+        width: 170px;
+        height: 800px;
+        background: linear-gradient(to top, rgba(235, 255, 224, 0.601), rgb(255, 249, 240, 0.601));
+    }
+    #side:hover .opswitch {
+        opacity: 1;
+    }
+    #side:hover #namecard {
+        margin: 50px auto;
+    }
+    #side:hover #profile {
+        transform: scale(2.5) rotate(360deg);
+        margin-bottom: 40px;
+    }
+    #contents {
+        width: 600px;
+        height: 100%;
+        float: right;
+        border-radius: 30px;
+        background: linear-gradient(to top, rgba(235, 255, 224, 0.675), rgb(255, 249, 240, 0.675));
+        color: rgb(104, 69, 29);
     }
     section {
         margin: 30px;
         padding: 20px;
-        border-bottom: 2px dotted #f0bb2b;
-    }
-    img {
-        border-radius: 10px;
+        border-bottom: 2px dotted #df9930;
     }
     .subtitle {
         margin: 20px;
-        color: #b15e00;
+        color: #a76234;
     }
   </style>
 </head>
@@ -82,22 +128,29 @@
         <!-- 사이드바 -->
         <div id="side">
             <div id="namecard">
-                <img src="media/catprofile.jpg" alt="" width="150px">
+                <img id="profile" src="media/chiprofile.jpg" alt="">
                 <h1>
-                    <span style="font-size: 40px;">H</span>
-                    <span style="font-size: 35px;">O</span>
-                    <span style="font-size: 30px;">N</span>
-                    <span style="font-size: 25px;">G</span>
+                   SPR 
                 </h1>    
-                <p>프로그래밍 재밌댜</p>
+                <p class="opswitch">
+                    <span>프로그래밍</span> 
+                    <span>재밌댜</span>
+                </p>
             </div>
-            <div id="detail">
+            <div id="detail" class="opswitch">
                 <p>Incheon, Korea</p>
-                <p>whaong@naver.com</p>
+                <p>s.subin.0208@gmail.com</p>
             </div>
-            <div id="sns">
+            <div id="sns" class="opswitch">
                 <h2>SNS</h2>
-                <h3><a href="#">클릭!</a></h3>
+                <h3>
+                    <a href="#">
+                        <img src="media/instagram.png">
+                    </a>
+                    <a href="#">
+                        <img src="media/kakaotalk.png">
+                    </a>
+                </h3>
             </div>           
         </div>
         <div id="contents">
