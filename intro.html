@@ -72,13 +72,19 @@
     #detail p {
         font-size: 14px;
     }
+    #time {
+            font-size: 25px;
+            color: rgb(43, 87, 8);
+            font-weight: bold;
+            text-align: center;
+        }
     #sns {
         width: 100px;
         height: 100px;
         color: #5d5c17;
         text-align: center;
         position: absolute;
-        bottom: 100px;
+        bottom: 130px;
         left: 35px;
         transition: all 0.2s;
     }
@@ -151,6 +157,7 @@
                         <img src="media/kakaotalk.png">
                     </a>
                 </h3>
+                <div id="time"></div>
             </div>           
         </div>
         <div id="contents">
@@ -223,3 +230,17 @@
     </div>
 </body>
 </html>
+<script>
+    setInterval(()=>{
+        let datetime = new Date();
+
+        let hours = String(datetime.getHours()).padStart(2, '0');
+        let minutes = String(datetime.getMinutes()).padStart(2, '0');
+        let seconds = String(datetime.getSeconds()).padStart(2, '0');
+
+        let time = `${hours}:${minutes}:${seconds}`;
+        
+        let obj = document.querySelector("#time");
+        obj.innerHTML = time
+    }, 1000);
+</script>
