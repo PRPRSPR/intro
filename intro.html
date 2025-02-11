@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
   <style>
     body {
-        background-image: url(media/bg250210.jpg);
+        background-image: url(media/bg25021022.jpg);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -25,14 +25,15 @@
     }
     #container {
         width: 800px;
-        height: 1000px;
+        height: 2100px;
         margin: 50px auto;
+        position: relative;
     }
     #side {
         width: 100px;
         height: 150px;
         border-radius: 30px;
-        background-color: rgba(255, 249, 240, 0.601);
+        background-color: rgba(255, 249, 240, 0.6);
         position: fixed;
         transition: all 0.6s;
     }
@@ -41,7 +42,7 @@
         height: 55px;
         margin: 20px auto;
         text-align: center;
-        color: #a76234;
+        color: #c97035;
         position: relative;
         transition: all 0.5s;
     }
@@ -55,10 +56,7 @@
         border-radius: 50%;
         transition: all 0.5s;
     }
-    a img {
-        width: 30px;
-        height: 30px;
-    }
+    
     #detail {
         width: 100px;
         height: 50px;
@@ -68,16 +66,17 @@
         bottom: 10px;
         left: 10px;
         transition: all 0.2s;
+        text-shadow: 0px 0px 1px #698a6c;
     }
     #detail p {
         font-size: 14px;
     }
     #time {
-            font-size: 25px;
-            color: rgb(43, 87, 8);
-            font-weight: bold;
-            text-align: center;
-        }
+        font-size: 25px;
+        color: rgb(46, 85, 14);
+        font-weight: bold;
+        text-align: center;
+    }
     #sns {
         width: 100px;
         height: 100px;
@@ -90,6 +89,7 @@
     }
     #sns a {
         display: inline-block;
+        margin: 0 5px;
     }
     .opswitch {
         opacity: 0;
@@ -97,7 +97,7 @@
     #side:hover {
         width: 170px;
         height: 800px;
-        background: linear-gradient(to top, rgba(235, 255, 224, 0.601), rgb(255, 249, 240, 0.601));
+        background: linear-gradient(to top, rgba(235, 255, 224, 0.6), rgb(255, 249, 240, 0.6));
     }
     #side:hover .opswitch {
         opacity: 1;
@@ -112,8 +112,9 @@
     #contents {
         width: 600px;
         height: 100%;
-        float: right;
         border-radius: 30px;
+        position: absolute;
+        right: 0;
         background: linear-gradient(to top, rgba(235, 255, 224, 0.675), rgb(255, 249, 240, 0.675));
         color: rgb(104, 69, 29);
     }
@@ -124,7 +125,34 @@
     }
     .subtitle {
         margin: 20px;
-        color: #a76234;
+        color: #cf7b42;
+        text-shadow: 2px 1px 3px #7e4620;
+    }
+    #frame {
+        width: 500px;
+        margin: 0 auto;
+    }
+    #fvPic {
+        width: 400px;
+        height: 400px;
+        margin: 40px;
+        border-radius: 15px;
+    }
+    #picList {
+        margin: 10px 30px;
+        padding: 0;
+        list-style: none;
+    }
+    .pic {
+        border-radius: 30px;
+        width: 80px;
+        height: 80px;
+    }
+    #picList img:hover {
+        cursor: pointer;
+    }
+    #construction {
+        margin: 0 150px;
     }
   </style>
 </head>
@@ -134,13 +162,13 @@
         <!-- 사이드바 -->
         <div id="side">
             <div id="namecard">
-                <img id="profile" src="media/chiprofile.jpg" alt="">
-                <h1>
+                <img id="profile" src="media/profile.png" alt="프로필이미지">
+                <h1 style="text-shadow: 2px 1px 3px #8f5127;">
                    SPR 
                 </h1>    
                 <p class="opswitch">
-                    <span>프로그래밍</span> 
-                    <span>재밌댜</span>
+                    <span>프,로그래..밍</span> 
+                    <span>재밌.다</span>
                 </p>
             </div>
             <div id="detail" class="opswitch">
@@ -150,11 +178,11 @@
             <div id="sns" class="opswitch">
                 <h2>SNS</h2>
                 <h3>
-                    <a href="#">
-                        <img src="media/instagram.png">
+                    <a href="https://www.instagram.com/s.subin.spr/" target="_blank">
+                        <img src="media/instagram.png" width="30" height="30">
                     </a>
-                    <a href="#">
-                        <img src="media/kakaotalk.png">
+                    <a href="https://open.kakao.com/me/SPRaa" target="_blank">
+                        <img src="media/kakaotalk.png" width="30" height="30">
                     </a>
                 </h3>
                 <div id="time"></div>
@@ -163,7 +191,7 @@
         <div id="contents">
             <section>
                 <h2 class="subtitle">자기소개</h2>
-                <p><mark>프로그래밍</mark>에 관심이 많습니댜. <br>현재 열심히 공부하며 코딩 즁!</p>
+                <p><strong>프로그래밍</strong>에 관심이 많습니다. <br>현재 열심히 공부하며 코딩 중!</p>
             </section>
 
             <!-- 경력 -->
@@ -173,14 +201,14 @@
                     <li>프론트엔드
                         <ul>
                             <li>HTML/CSS/JAVASCRIPT </li>
-                            <li>웹 페이지 잘 만든댜 </li>
-                            <li>다 잘햠</li> 
+                            <li>웹 페이지 잘 만들겠습니다. </li>
+                            <li>다 잘하고 싶습니다.</li> 
                         </ul>
                     </li>
                     <li>백엔드
                         <ul>
-                            <li>자바 잘햠</li>
-                            <li>오라클 더 잘햠</li>
+                            <li>자바 잘하고 싶습니다.</li>
+                            <li>오라클은 더 잘하고싶습니다.</li>
                         </ul>                        
                     </li>
                 </ul>             
@@ -214,17 +242,33 @@
                       <tr>
                           <td>좋은대학교</td>
                           <td>좋은학과</td>
-                          <td>2010.3 ~ 2013.2</td>
+                          <td>2013.3 ~ 2015.2</td>
                           <td>졸업</td>
                       </tr>
                       <tr>
                           <td>꽤좋은고등학교</td>
-                          <td> - </td>
-                          <td>2007.3 ~ 2009.2</td>
+                          <td>꽤좋은학과</td>
+                          <td>2010.3 ~ 2012.2</td>
                           <td>졸업</td>
                       </tr>
                   </tbody>
                 </table>
+            </section>
+            <section>
+                <h2 class="subtitle">최애PIC</h2>
+                <p>가장 좋아하는 사진들</p>
+                <p>~취향TMI~</p>
+                <img src="media/pic/pic1.png" alt="좋아하는사진" id="fvPic">
+                <div id="picList">
+                    <img src="media/pic/pic2.jpg" class="pic">
+                    <img src="media/pic/pic3.jpg" class="pic">
+                    <img src="media/pic/pic4.jpg" class="pic">
+                    <img src="media/pic/pic5.jpg" class="pic">
+                    <img src="media/pic/pic6.jpg" class="pic">
+                </div>
+            </section>
+            <section>
+                <img id="construction" src="media/construction.png" alt="공사중" width="200">
             </section>
         </div>        
     </div>
@@ -243,4 +287,14 @@
         let obj = document.querySelector("#time");
         obj.innerHTML = time
     }, 1000);
+
+    let fvPic = document.querySelector("#fvPic");
+    let pic = document.querySelectorAll(".pic");
+    for(let i=0; i<pic.length; i++){
+        pic[i].onclick = function(e){
+            let temp = this.src;
+            this.src = fvPic.src;
+            fvPic.src = temp;
+        }
+    }
 </script>
