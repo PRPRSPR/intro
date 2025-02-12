@@ -11,16 +11,6 @@
             position: absolute;
             top: 40px;
         }
-        #mode {
-            cursor: pointer;
-            width: 40px;
-            height: 40px;
-            position: fixed;
-            top: 70px;
-            right: 575px;
-            border-radius: 15px;
-            overflow: hidden;
-        }
         
         .light #lightIcon {
             color: #3550c9;
@@ -102,8 +92,7 @@
             text-shadow: 2px 1px 3px #e6a249;
         }
 
-        #namecard h1,
-        p {
+        #namecard h1, #namecard p {
             margin: 0;
         }
 
@@ -140,6 +129,7 @@
         }
         #detail p {
             font-size: 14px;
+            margin: 0;
         }
 
         #time {
@@ -223,10 +213,23 @@
             width: 600px;
             height: 100%;
             border-radius: 30px;
-            position: absolute;
-            right: 0;
+            position: relative;
+            left: 200px;
             background-color: rgba(255, 255, 255, 0.6);
+            overflow: hidden;
         }
+
+        #mode {
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
         .light #contents {
             color: #122577;
         }
@@ -234,7 +237,7 @@
             color: #4b3d2a;
         }
         section {
-            margin: 30px;
+            margin: 0px 50px;
             padding: 20px;
             transition: all 0.5s;
         }
@@ -257,19 +260,21 @@
             text-shadow: 2px 1px 3px #e6a249;
         }
         #frame {
-            width: 500px;
             margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
         }
 
         #fvPic {
             width: 400px;
             height: 400px;
-            margin: 40px;
+            margin-bottom: 20px;
             border-radius: 15px;
         }
 
         #picList {
-            margin: 10px 30px;
+            margin: 10px 0;
             padding: 0;
             list-style: none;
         }
@@ -396,13 +401,15 @@
                 <h2 class="subtitle">최애PIC</h2>
                 <p style="font-size: 12px;"><del>가장 좋아하는 사진들</del></p>
                 <p><strong>~ 취향TMI ~</strong></p>
-                <img src="media/pic/pic1.png" alt="좋아하는사진" id="fvPic">
-                <div id="picList">
-                    <img src="media/pic/pic2.jpg" class="pic">
-                    <img src="media/pic/pic3.jpg" class="pic">
-                    <img src="media/pic/pic4.jpg" class="pic">
-                    <img src="media/pic/pic5.jpg" class="pic">
-                    <img src="media/pic/pic6.jpg" class="pic">
+                <div id="frame">
+                    <img src="media/pic/pic1.png" alt="좋아하는사진" id="fvPic">
+                    <div id="picList">
+                        <img src="media/pic/pic2.jpg" class="pic">
+                        <img src="media/pic/pic3.jpg" class="pic">
+                        <img src="media/pic/pic4.jpg" class="pic">
+                        <img src="media/pic/pic5.jpg" class="pic">
+                        <img src="media/pic/pic6.jpg" class="pic">
+                    </div>
                 </div>
             </section>
             <section>
