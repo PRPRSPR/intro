@@ -315,13 +315,13 @@
                 <h2>HOME</h2>
                 <h3>
                     <a href="https://steamcommunity.com/id/aaaasss8979/" target="_blank">
-                        <img src="media/steam.png" width="30" height="30">
+                        <img id="steam" src="media/steam.png" width="30" height="30">
                     </a>
                     <a href="https://www.instagram.com/s.subin.spr/" target="_blank">
-                        <img src="media/instagram.png" width="30" height="30">
+                        <img id="insta" src="media/instagram.png" width="30" height="30">
                     </a>
                     <a href="https://open.kakao.com/me/SPRaa" target="_blank">
-                        <img src="media/kakaotalk.png" width="30" height="30">
+                        <img id="kakao" src="media/kakaotalk.png" width="30" height="30">
                     </a>
                 </h3>
                 <div id="time"></div>
@@ -444,11 +444,23 @@
         }
     }
 
+    let kakao = document.getElementById("kakao");
+    let insta = document.getElementById("insta");
+    let steam = document.getElementById("steam");
     let mode = document.querySelector("#mode");
     let body = document.body;
     mode.onclick = function(e) {
         body.classList.toggle('dark');
         body.classList.toggle('light');
+        if(body.classList.contains('dark')){
+            kakao.src = "media/kakaotalkdark.png";
+            insta.src = "media/instagramdark.png";
+            steam.src = "media/steamdark.png";
+        } else {
+            kakao.src = "media/kakaotalk.png";
+            insta.src = "media/instagram.png";
+            steam.src = "media/steam.png";
+        }
     }
 
 </script>
