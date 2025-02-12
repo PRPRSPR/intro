@@ -1,174 +1,224 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-	<title>온라인 프로필</title>
-	<meta charset="utf-8">
-  <style>
-    body {
-        background-image: url(media/bg25021022.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    table {
-      width:70%; 
-      margin: 5px 30px;
-      border-collapse: collapse; 
-      text-align: center;
-    }
-    thead {
-      background:#9ab675;  
-    }
-    th, td {
-      border:1px solid #879379; 
-      padding:5px;  
-      font-size:0.8em; 
-    }
-    #container {
-        width: 800px;
-        height: 2100px;
-        margin: 50px auto;
-        position: relative;
-    }
-    #side {
-        width: 100px;
-        height: 150px;
-        border-radius: 30px;
-        background-color: rgba(255, 249, 240, 0.6);
-        position: fixed;
-        transition: all 0.6s;
-    }
-    #namecard {
-        width: 100px;
-        height: 55px;
-        margin: 20px auto;
-        text-align: center;
-        color: #3550c9;
-        position: relative;
-        transition: all 0.5s;
-    }
-    #namecard h1, p {
-        margin: 0;
-    }
-    #profile {
-        width: 50px;
-        height: 50px;
-        margin-bottom: 10px;
-        border-radius: 50%;
-        transition: all 0.5s;
-    }
-    
-    #detail {
-        width: 100px;
-        height: 50px;
-        color: #122577;
-        text-align: left;
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
-        transition: all 0.2s;
-        text-shadow: 0px 0px 1px #698a6c;
-    }
-    #detail p {
-        font-size: 14px;
-    }
-    #time {
-        font-size: 25px;
-        color: #122577;
-        font-weight: bold;
-        text-align: center;
-    }
-    #sns {
-        width: 120px;
-        height: 100px;
-        color: #122577;
-        text-align: center;
-        position: absolute;
-        bottom: 130px;
-        left: 25px;
-        transition: all 0.2s;
-    }
-    #sns a {
-        display: inline-block;
-        margin: 0 2px;
-    }
-    .opswitch {
-        opacity: 0;
-    }
-    #side:hover {
-        width: 170px;
-        height: 800px;
-        background: linear-gradient(to top, rgba(235, 255, 224, 0.6), rgb(255, 249, 240, 0.6));
-    }
-    #side:hover .opswitch {
-        opacity: 1;
-    }
-    #side:hover #namecard {
-        margin: 50px auto;
-    }
-    #side:hover #profile {
-        transform: scale(2.5) rotate(360deg);
-        margin-bottom: 40px;
-    }
-    #contents {
-        width: 600px;
-        height: 100%;
-        border-radius: 30px;
-        position: absolute;
-        right: 0;
-        background: linear-gradient(to top, rgba(235, 255, 224, 0.675), rgb(255, 249, 240, 0.675));
-        color: #122577;
-    }
-    section {
-        margin: 30px;
-        padding: 20px;
-        border-bottom: 2px dotted #ffc375;
-    }
-    .subtitle {
-        margin: 20px;
-        color: #3550c9;
-        text-shadow: 2px 1px 3px #3550c9;
-    }
-    #frame {
-        width: 500px;
-        margin: 0 auto;
-    }
-    #fvPic {
-        width: 400px;
-        height: 400px;
-        margin: 40px;
-        border-radius: 15px;
-    }
-    #picList {
-        margin: 10px 30px;
-        padding: 0;
-        list-style: none;
-    }
-    .pic {
-        border-radius: 30px;
-        width: 80px;
-        height: 80px;
-    }
-    #picList img:hover {
-        cursor: pointer;
-    }
-    #construction {
-        margin: 0 150px;
-    }
-  </style>
+    <title>온라인 프로필</title>
+    <meta charset="utf-8">
+    <style>
+        .light {
+            background-color: rgb(245, 227, 221);
+        }
+
+        table {
+            width: 70%;
+            margin: 5px 30px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        thead {
+            background: #ffd8b8;
+        }
+
+        th,
+        td {
+            border: 1px solid #eec186;
+            padding: 5px;
+            font-size: 0.8em;
+        }
+
+        #container {
+            width: 800px;
+            height: 2100px;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        #side {
+            width: 100px;
+            height: 150px;
+            border-radius: 30px;
+            background-color: rgba(255, 255, 255, 0.6);
+            position: fixed;
+            transition: all 0.6s;
+        }
+
+        #namecard {
+            width: 100px;
+            height: 55px;
+            margin: 20px auto;
+            text-align: center;
+            color: #3550c9;
+            position: relative;
+            transition: all 0.5s;
+        }
+
+        #namecard h1,
+        p {
+            margin: 0;
+        }
+
+        #profile {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            transition: all 0.5s;
+            box-shadow: 1px 1px 7px #ffc375;
+        }
+
+        #detail {
+            width: 100px;
+            height: 50px;
+            color: #122577;
+            text-align: left;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            transition: all 0.2s;
+            text-shadow: 0px 0px 1px #3550c9;
+        }
+
+        #detail p {
+            font-size: 14px;
+        }
+
+        #time {
+            font-size: 25px;
+            color: #122577;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #sns {
+            width: 120px;
+            height: 100px;
+            color: #3550c9;
+            text-align: center;
+            position: absolute;
+            bottom: 150px;
+            left: 25px;
+            transition: all 0.2s;
+            text-shadow: 1px 1px 3px #122577;
+        }
+
+        #sns a {
+            display: inline-block;
+            margin: 0 2px;
+        }
+
+        #sns a:hover {
+            animation: shake 0.5s;
+        }
+
+        @keyframes shake {
+            from {
+                transform: rotate(0);
+            }
+
+            25% {
+                transform: rotate(30deg);
+            }
+
+            75% {
+                transform: rotate(-30deg);
+            }
+
+            to {
+                transform: rotate(0);
+            }
+        }
+
+        .opswitch {
+            opacity: 0;
+        }
+
+        #side:hover {
+            width: 170px;
+            height: 800px;
+        }
+
+        #side:hover .opswitch {
+            opacity: 1;
+        }
+
+        #side:hover #namecard {
+            margin: 50px auto;
+        }
+
+        #side:hover #profile {
+            transform: scale(2.5) rotate(360deg);
+            margin-bottom: 40px;
+        }
+
+        #contents {
+            width: 600px;
+            height: 100%;
+            border-radius: 30px;
+            position: absolute;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.6);
+            color: #122577;
+        }
+
+        section {
+            margin: 30px;
+            padding: 20px;
+            border-bottom: 2px dotted #ffc375;
+        }
+
+        .subtitle {
+            margin: 20px;
+            color: #3550c9;
+            text-shadow: 2px 1px 3px #3550c9;
+        }
+
+        #frame {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        #fvPic {
+            width: 400px;
+            height: 400px;
+            margin: 40px;
+            border-radius: 15px;
+        }
+
+        #picList {
+            margin: 10px 30px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .pic {
+            border-radius: 30px;
+            width: 80px;
+            height: 80px;
+        }
+
+        #picList img:hover {
+            cursor: pointer;
+        }
+
+        #construction {
+            margin: 0 150px;
+        }
+    </style>
 </head>
 
-<body>
+<body id="bg" class="light">
     <div id="container">
         <!-- 사이드바 -->
         <div id="side">
             <div id="namecard">
                 <img id="profile" src="media/profile.png" alt="프로필이미지">
-                <h1 style="text-shadow: 2px 1px 3px #8f5127;">
-                   SPR 
-                </h1>    
+                <h1 style="text-shadow: 2px 1px 3px #3550c9;">
+                    SPR
+                </h1>
                 <p class="opswitch">
-                    <span>프,로그래..밍</span> 
+                    <span>프,로그래..밍</span>
                     <span>재밌.다</span>
                 </p>
             </div>
@@ -179,7 +229,7 @@
             <div id="sns" class="opswitch">
                 <h2>HOME</h2>
                 <h3>
-                    <a href="https://steamcommunity.com/id/aaaasss8979/games/?tab=all" target="_blank">
+                    <a href="https://steamcommunity.com/id/aaaasss8979/" target="_blank">
                         <img src="media/steam.png" width="30" height="30">
                     </a>
                     <a href="https://www.instagram.com/s.subin.spr/" target="_blank">
@@ -190,7 +240,7 @@
                     </a>
                 </h3>
                 <div id="time"></div>
-            </div>           
+            </div>
         </div>
         <div id="contents">
             <section>
@@ -206,26 +256,26 @@
                         <ul>
                             <li>HTML/CSS/JAVASCRIPT </li>
                             <li>웹 페이지 잘 만들겠습니다. </li>
-                            <li>다 잘하고 싶습니다.</li> 
+                            <li>다 잘하고 싶습니다.</li>
                         </ul>
                     </li>
                     <li>백엔드
                         <ul>
                             <li>자바 잘하고 싶습니다.</li>
                             <li>오라클은 더 잘하고싶습니다.</li>
-                        </ul>                        
+                        </ul>
                     </li>
-                </ul>             
+                </ul>
             </section>
 
             <!-- 숙련도 -->
             <section>
                 <h2 class="subtitle">보유 기술</h2>
-                <li style="list-style: none;"> 
+                <li style="list-style: none;">
                     <ul>
                         <li>자바</li>
                         <li>오라클</li>
-                    </ul>                        
+                    </ul>
                 </li>
             </section>
 
@@ -233,29 +283,29 @@
             <section>
                 <h2 class="subtitle">Education</h2>
                 <table>
-                  <caption>학력 사항</caption>
-                  <thead>
-                      <tr>
-                          <th>출신학교</th>
-                          <th>전공</th>
-                          <th>기간</th>
-                          <th>구분</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <td>좋은대학교</td>
-                          <td>좋은학과</td>
-                          <td>2013.3 ~ 2015.2</td>
-                          <td>졸업</td>
-                      </tr>
-                      <tr>
-                          <td>꽤좋은고등학교</td>
-                          <td>꽤좋은학과</td>
-                          <td>2010.3 ~ 2013.2</td>
-                          <td>졸업</td>
-                      </tr>
-                  </tbody>
+                    <caption>학력 사항</caption>
+                    <thead>
+                        <tr>
+                            <th>출신학교</th>
+                            <th>전공</th>
+                            <th>기간</th>
+                            <th>구분</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>좋은대학교</td>
+                            <td>좋은학과</td>
+                            <td>2013.3 ~ 2015.2</td>
+                            <td>졸업</td>
+                        </tr>
+                        <tr>
+                            <td>꽤좋은고등학교</td>
+                            <td>꽤좋은학과</td>
+                            <td>2010.3 ~ 2013.2</td>
+                            <td>졸업</td>
+                        </tr>
+                    </tbody>
                 </table>
             </section>
             <section>
@@ -274,12 +324,13 @@
             <section>
                 <img id="construction" src="media/construction.png" alt="공사중" width="200">
             </section>
-        </div>        
+        </div>
     </div>
 </body>
+
 </html>
 <script>
-    setInterval(()=>{
+    setInterval(() => {
         let datetime = new Date();
 
         let hours = String(datetime.getHours()).padStart(2, '0');
@@ -287,15 +338,15 @@
         let seconds = String(datetime.getSeconds()).padStart(2, '0');
 
         let time = `${hours}:${minutes}:${seconds}`;
-        
+
         let obj = document.querySelector("#time");
         obj.innerHTML = time
     }, 1000);
 
     let fvPic = document.querySelector("#fvPic");
     let pic = document.querySelectorAll(".pic");
-    for(let i=0; i<pic.length; i++){
-        pic[i].onclick = function(e){
+    for (let i = 0; i < pic.length; i++) {
+        pic[i].onclick = function (e) {
             let temp = this.src;
             this.src = fvPic.src;
             fvPic.src = temp;
