@@ -1,16 +1,16 @@
 <!doctype html>
 <html lang="ko">
-
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link rel="stylesheet" href="intro.css">
-    <title>온라인 프로필</title>
-    <meta charset="utf-8">
-</head>
-
-<body id="bg" class="light">
-    <div id="container">
-        <!-- 사이드바 -->
+    
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+        <link rel="stylesheet" href="intro.css">
+        <title>온라인 프로필</title>
+        <meta charset="utf-8">
+    </head>
+    
+    <body id="bg" class="light">
+        <div id="container">
+            <!-- 사이드바 -->
         <div id="side">
             <div id="namecard">
                 <img id="profile" src="media/profile.png" alt="프로필이미지">
@@ -45,8 +45,8 @@
                 <span id="lightIcon" class="material-symbols-outlined">sunny</span>
                 <span id="darkIcon" class="material-symbols-outlined">nights_stay</span>
             </div>
-            <section>
-                <h2 class="subtitle">자기소개</h2>
+            <section id="section1">
+                <h2 class="subtitle" style="margin-top: 40px;">자기소개</h2>
                 <p>
                     <strong>프로그래밍</strong>에 관심이 많습니다.
                     <br>좀 더 편하고 효율적이며 창의적인 세상을 
@@ -56,8 +56,8 @@
             </section>
 
             <!--숙련도 -->
-            <section>
-                <h2 class="subtitle">보유 기술</h2>
+            <section id="section2">
+                <h2 class="subtitle">보유기술</h2>
                 <p>언젠가 리스트를 다양하게, 가득 채우는 날을 목표로 합니다.</p>
                 <ul>
                     <li>프론트엔드
@@ -94,10 +94,10 @@
             </section>
 
             <!-- 학력 -->
-            <section>
+            <section id="section3">
                 <h2 class="subtitle">Education</h2>
                 <table>
-                    <caption><strong>학력 사항</strong></caption>
+                    <caption><strong>학력사항</strong></caption>
                     <thead>
                         <tr>
                             <th>출신학교</th>
@@ -122,15 +122,12 @@
                     </tbody>
                 </table>
             </section>
-            <section>
+            <section id="section4">
                 <h2 class="subtitle">최애PIC</h2>
                 <p>가장 좋아하는 사진들</p>
                 <p style="font-size: 12px; margin-bottom: 20px;"><del><strong>취향TMI</strong></del></p>
                 <div id="frame">
-                    <a href="javascript:;" id="zoom-wrap">
-                        <img src="media/pic/pic1.png" alt="좋아하는사진" id="fvPic">
-                        <span class="material-symbols-outlined" id="zoom-in">zoom_in</span>
-                    </a>
+                    <img src="media/pic/pic1.png" alt="좋아하는사진" id="fvPic">
                     <div id="picList">
                         <img src="media/pic/pic2.jpg" class="pic">
                         <img src="media/pic/pic3.jpg" class="pic">
@@ -139,13 +136,8 @@
                         <img src="media/pic/pic6.jpg" class="pic">
                     </div>
                 </div>
-                <div class="popup-wrap">
-                    <div class="popup">
-                        <img src="media/pic/pic1.png" alt="좋아하는사진 크게보기" id="bigfvPic">
-                    </div>
-                </div>
             </section>
-            <section>
+            <section id="section5">
                 <img id="construction" src="media/construction.png" alt="공사중" width="200">
             </section>
         </div>
@@ -175,7 +167,7 @@
             this.src = fvPic.src;
             fvPic.src = temp;
         }
-    }
+    };
 
     let kakao = document.getElementById("kakao");
     let insta = document.getElementById("insta");
@@ -194,7 +186,5 @@
             insta.src = "media/instagram.png";
             steam.src = "media/steam.png";
         }
-    }
-
-    
+    };
 </script>

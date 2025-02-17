@@ -1,7 +1,11 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 
-.material-symbols-outlined {
+body {
+    scroll-behavior: smooth;
+}
+
+#mode .material-symbols-outlined {
     font-size: 35px;
     position: absolute;
     top: 40px;
@@ -67,7 +71,7 @@ td {
 }
 
 #container {
-    width: 800px;
+    width: 850px;
     height: 2100px;
     margin: 50px auto;
     position: relative;
@@ -241,7 +245,7 @@ td {
     height: 100%;
     border-radius: 30px;
     position: relative;
-    left: 200px;
+    left: 250px;
     background-color: rgba(255, 255, 255, 0.6);
     overflow: hidden;
 }
@@ -300,40 +304,6 @@ section {
     justify-content: space-around;
     flex-wrap: wrap;
 }
-#zoom-wrap {
-    position: relative;
-    overflow: hidden;
-}
-#zoom-in {
-    position: absolute;
-    top: 360px;
-    right: 10px;
-    color: #ffffff;
-    /* display: none; */
-}
-.popup-wrap {
-    background-color: rgba(0, 0, 0, .7);
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: none;
-    padding: 15px;
-}
-
-.popup {
-    width: 100%;
-    max-width: 400px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: #205099;
-    box-shadow: 5px 10px 10px 1px rgba(0, 0, 0, .3);
-    margin: auto;
-}
 
 #fvPic {
     width: 400px;
@@ -361,6 +331,6 @@ section {
     margin: 0 130px;
 }
 
-a {
+li a {
     color: #0e132e;
 }
