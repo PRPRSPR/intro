@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+@import url('//fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 
 body{
     cursor: url('../media/cursor.cur'), default;
@@ -28,7 +28,7 @@ a:hover {
 }
 
 .light {
-    background-color: rgb(245, 227, 221);
+    background-color: #f5e3dd;
     transition: all 0.6s;
 }
 
@@ -433,4 +433,86 @@ li a {
 
 .dark #topBtn {
     color: #f0c082;
+}
+
+#section6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.player {
+    width: 300px;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+}
+.light .player {
+    background-color: #eec1864b;
+    box-shadow: 0 2px 15px #eec186;
+}
+.dark .player {
+    background-color: #1225774f;
+    box-shadow: 0 2px 15px #122577;
+}
+
+.info p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.light .info p  {
+    color: #122577;
+}
+.dark .info p  {
+    color: #e6a249;
+}
+
+.progress-container {
+    width: 100%;
+    height: 5px;
+    background: #ddd;
+    border-radius: 5px;
+    cursor: url('../media/cursor (1).cur'), pointer;
+    position: relative;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 5px;
+    border-radius: 5px;
+    transition: width 0.2s ease;
+}
+
+.light #progress-bar {
+    background: #3550c9;
+}
+.dark #progress-bar {
+    background: #eec186;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.controls button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    margin: 0 10px;
+    cursor: url('../media/cursor (1).cur'), pointer;
+}
+
+.light .controls button:hover {
+    color: #3550c9;
+}
+.dark .controls button:hover {
+    color: #eec186;
+}
+
+.small {
+    font-size: 10px;
 }

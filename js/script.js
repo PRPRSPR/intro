@@ -1,10 +1,77 @@
+const audio = document.getElementById("audio");
+const playBtn = document.getElementById("play");
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
+const progressBar = document.getElementById("progress-bar");
+const progressContainer = document.querySelector(".progress-container");
+const trackTitle = document.getElementById("track-title");
+
+const tracks = [
+    { title: "🎵 Ujabes - Rio", file: "../media/Ujabes - Rio.mp3" },
+    { title: "🎵 Ujabes - Alice", file: "../media/I dreamed about you last night.mp3" },
+    { title: "🎵 Ujabes - Kafka On The Shore", file: "../media/Ujabes - Kafka On The Shore.mp3" }
+];
+
+let currentTrack = 0;
+
+function loadTrack(index) {
+    audio.src = tracks[index].file;
+    trackTitle.innerText = tracks[index].title;
+    audio.load();
+}
+
+playBtn.addEventListener("click", () => {
+    if (audio.paused) {
+        audio.play();
+        playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+    } else {
+        audio.pause();
+        playBtn.innerHTML = '<i class="fas fa-play"></i>';
+    }
+});
+
+function nextTrack() {
+    currentTrack = (currentTrack + 1) % tracks.length;
+    loadTrack(currentTrack);
+    audio.play();
+    playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+}
+
+prevBtn.addEventListener("click", () => {
+    currentTrack = (currentTrack - 1 + tracks.length) % tracks.length;
+    loadTrack(currentTrack);
+    audio.play();
+    playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+});
+
+nextBtn.addEventListener("click", nextTrack);
+
+audio.addEventListener("timeupdate", () => {
+    const progressPercent = (audio.currentTime / audio.duration) * 100;
+    progressBar.style.width = `${progressPercent}%`;
+});
+
+progressContainer.addEventListener("click", (e) => {
+    const width = progressContainer.clientWidth;
+    const clickX = e.offsetX;
+    const duration = audio.duration;
+    audio.currentTime = (clickX / width) * duration;
+});
+
+audio.addEventListener("ended", nextTrack);
+
 window.onload = () => {
+    loadTrack(currentTrack);
+    audio.volume = 0.3;
+    audio.play();
+    playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+
     let apiURL = 'https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?';
     let apiKey = 'KfnFqggt6uHPlWAXrfEiqUVrs%2F%2FZqaxSjlhuwdQK5mHccyS2rt2A1c44p7qq6o7l4%2BieviPEAIt%2BeP1tumunDg%3D%3D';
     var today = new Date();
 
-    // var time = ('0' + today.getHours()).slice(-2) + '00';
-    var time = "0500";
+    var time = ('0' + today.getHours()).slice(-2) + '00';
+    // var time = "0500";
     var todayFormat = today.getFullYear() + ('0' + (today.getMonth() + 1)).slice(-2) + ('0' + today.getDate()).slice(-2);
 
     function parseXML(xmlDOM) {
@@ -75,3 +142,5 @@ window.onload = () => {
 
     ajtest();
 }
+
+
