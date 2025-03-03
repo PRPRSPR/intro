@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/intro.css">
+    <title>온라인 프로필</title>
+    <meta charset="utf-8">
+</head>
+
+<body id="bg" class="light">
+    <div id="container">
+        <!-- 사이드바 -->
+        <div id="side">
+            <div id="namecard">
+                <img id="profile" src="../media/profile.png" alt="프로필이미지">
+                <h1>SPR</h1>
+                <p class="opswitch">
+                    <span>프,로그래..밍</span>
+                    <span><br>재밌.어요,!</span>
+                </p>
+            </div>
+            <div class="weather-widget opswitch">
+                <div class="weather-title">현재 날씨</div>
+                <div class="weather-info"><strong>인천광역시 부평구</strong></div>
+                <span class="weather-info" id="weather-PTY">로</span>
+                <span class="weather-info" id="weather-REH">딩</span>
+                <span class="weather-info" id="weather-T1H">중 ...</span>
+            </div>
+            <div id="detail" class="opswitch">
+                <p>Incheon, Korea</p>
+                <p>s.subin.0208@gmail.com</p>
+            </div>
+            <div id="sns" class="opswitch">
+                <h2>HOME</h2>
+                <h3>
+                    <a href="https://steamcommunity.com/id/aaaasss8979/" target="_blank">
+                        <img id="steam" src="../media/steam.png" width="30" height="30">
+                    </a>
+                    <a href="https://www.instagram.com/s.subin.spr/" target="_blank">
+                        <img id="insta" src="../media/instagram.png" width="30" height="30">
+                    </a>
+                    <a href="https://open.kakao.com/me/SPRaa" target="_blank">
+                        <img id="kakao" src="../media/kakaotalk.png" width="30" height="30">
+                    </a>
+                </h3>
+                <div id="time"></div>
+            </div>
+        </div>
+        <div id="contents">
+            <div id="mode">
+                <span id="lightIcon" class="material-symbols-outlined">sunny</span>
+                <span id="darkIcon" class="material-symbols-outlined">nights_stay</span>
+            </div>
+            <section id="section1">
+                <h2 class="subtitle" style="margin-top: 40px;">자기소개</h2>
+                <p>
+                    <strong>프로그래밍</strong>에 관심이 많습니다.
+                    <br>좀 더 편하고 효율적이며 창의적인 세상을
+                    <br>제 손끝으로 구현할 수 있다는게 참 즐거운 것 같습니다.
+                    <br>현재 열심히 공부하며 코딩 중입니다!
+                </p>
+            </section>
+
+            <!--숙련도 -->
+            <section id="section2">
+                <h2 class="subtitle">보유기술</h2>
+                <p>언젠가 리스트를 다양하게, 가득 채우는 날을 목표로 합니다.</p>
+                <ul>
+                    <li>프론트엔드
+                        <ul>
+                            <li>
+                                <a href="https://github.com/PRPRSPR/HTML" target="_blank">
+                                    HTML 기본문법 및 CSS와 Javascript
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/PRPRSPR/web_DB" target="_blank">
+                                    HTML에 DB연결 및 웹페이지 틀 만들기
+                                </a>
+                                (vue/ajax)
+                            </li>
+                            <li>
+                                <a href="https://github.com/PRPRSPR/intro" target="_blank">
+                                    자기소개 페이지 만들기
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>백엔드
+                        <ul>
+                            <li>
+                                <a href="https://github.com/PRPRSPR/Java_1" target="_blank">
+                                    Java
+                                </a>
+                            </li>
+                            <li><a href="javascript:;">Oracle</a> (SQL Developer 사용/ Github 연결하지 않음)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 학력 -->
+            <section id="section3">
+                <h2 class="subtitle">Education</h2>
+                <table>
+                    <caption><strong>학력사항</strong></caption>
+                    <thead>
+                        <tr>
+                            <th>출신학교</th>
+                            <th>전공</th>
+                            <th>기간</th>
+                            <th>구분</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>동양미래대학교</td>
+                            <td>생명화공학과</td>
+                            <td>2013.3 ~ 2015.2</td>
+                            <td>졸업</td>
+                        </tr>
+                        <tr>
+                            <td>(구)부평디자인과학고등학교</td>
+                            <td>환경과학과</td>
+                            <td>2010.3 ~ 2013.2</td>
+                            <td>졸업</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="section4">
+                <div class="canvasXY"><canvas id="canvas" width="450" height="300"></canvas></div>
+                <img src="../media/catflower.png" alt="창가" id="wtWindow">
+            </section>
+            <section id="section5">
+                <h2 class="subtitle">최애PIC</h2>
+                <p>가장 좋아하는 사진들</p>
+                <p style="font-size: 12px; margin-bottom: 20px;"><del><strong>취향TMI</strong></del></p>
+                <div id="frame">
+                    <img src="../media/pic/pic1.png" alt="좋아하는사진" id="fvPic">
+                    <div id="picList">
+                        <img src="../media/pic/pic2.jpg" class="pic">
+                        <img src="../media/pic/pic3.jpg" class="pic">
+                        <img src="../media/pic/pic4.jpg" class="pic">
+                        <img src="../media/pic/pic5.jpg" class="pic">
+                        <img src="../media/pic/pic6.jpg" class="pic">
+                    </div>
+                </div>
+            </section>
+            <section id="section6">
+                <img id="construction" src="../media/construction.png" alt="공사중" width="200">
+            </section>
+        </div>
+        <div id="topBtn">
+            <span class="material-symbols-outlined">vertical_align_top</span>
+        </div>
+    </div>
+    <script src="../js/weather.js"></script>
+    <script src="../js/intro.js"></script>
+    <script src="../js/weatherE.js"></script>
+</body>
+
+</html>
