@@ -69,9 +69,25 @@ window.onload = () => {
     let apiKey = 'KfnFqggt6uHPlWAXrfEiqUVrs%2F%2FZqaxSjlhuwdQK5mHccyS2rt2A1c44p7qq6o7l4%2BieviPEAIt%2BeP1tumunDg%3D%3D';
     var today = new Date();
 
-    var time = ('0' + today.getHours()).slice(-2) + '00';
-    // var time = "0500";
+    const baseTime = getBaseTime();
     var todayFormat = today.getFullYear() + ('0' + (today.getMonth() + 1)).slice(-2) + ('0' + today.getDate()).slice(-2);
+
+    function getBaseTime() {
+        const now = new Date();
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        
+        const baseTimes = ["2300", "2000", "1700", "1400", "1100", "0800", "0500", "0200"];
+        let baseTime = "0200";
+    
+        for (let time of baseTimes) {
+            if (hours > parseInt(time.substring(0, 2)) || (hours == parseInt(time.substring(0, 2)) && minutes >= 30)) {
+                baseTime = time;
+                break;
+            }
+        }
+        return baseTime;
+    };
 
     function parseXML(xmlDOM) {
         let resultCode = xmlDOM.getElementsByTagName("resultCode");
@@ -125,7 +141,7 @@ window.onload = () => {
         }
     }
 
-    let url = `${apiURL}serviceKey=${apiKey}&pageNo=1&numOfRows=1000&dataType=xml&base_date=${todayFormat}&base_time=${time}&nx=55&ny=125`;
+    let url = `${apiURL}serviceKey=${apiKey}&pageNo=1&numOfRows=1000&dataType=xml&base_date=${todayFormat}&base_time=${baseTime}&nx=55&ny=125`;
 
     function ajtest() {
         $.ajax({
