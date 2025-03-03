@@ -60,7 +60,17 @@ progressContainer.addEventListener("click", (e) => {
 
 audio.addEventListener("ended", nextTrack);
 
+var AudioContext;
+var audioContext;
+
 window.onload = () => {
+    navigator.mediaDevices.getUserMedia({ audio: true }).then(() => {
+        AudioContext = window.AudioContext || window.webkitAudioContext;
+        audioContext = new AudioContext();
+    }).catch(e => {
+        console.error(`Audio permissions denied: ${e}`);
+    });
+    
     loadTrack(currentTrack);
     audio.volume = 0.3;
     audio.play();
