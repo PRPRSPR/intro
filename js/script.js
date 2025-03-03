@@ -60,20 +60,9 @@ progressContainer.addEventListener("click", (e) => {
 
 audio.addEventListener("ended", nextTrack);
 
-var AudioContext;
-var audioContext;
-
 window.onload = () => {
-    navigator.mediaDevices.getUserMedia({ audio: true }).then(() => {
-        AudioContext = window.AudioContext || window.webkitAudioContext;
-        audioContext = new AudioContext();
-    }).catch(e => {
-        console.error(`Audio permissions denied: ${e}`);
-    });
-    
     loadTrack(currentTrack);
     audio.volume = 0.3;
-    audio.play();
     playBtn.innerHTML = '<i class="fas fa-pause"></i>';
 
     let apiURL = 'https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?';
